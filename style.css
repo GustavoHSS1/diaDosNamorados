@@ -1,0 +1,133 @@
+/* Importação de fonte do Google Fonts para um toque mais delicado */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300..700&display=swap');
+
+/* Reset básico para garantir consistência */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif; /* Fonte principal */
+    background: linear-gradient(to bottom right, #ffe6f2, #e0f2fe); /* Degradê suave de rosa claro para azul claro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #4a4a4a; /* Cor de texto mais suave */
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px; /* Largura máxima para o conteúdo */
+    width: 90%;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco translúcido */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    overflow: hidden; /* Garante que o conteúdo não vaze */
+}
+
+/* Estilo para as seções */
+.secaoUm, .secaoDois, .secaoTres {
+    margin-bottom: 40px; /* Espaço entre as seções */
+    padding: 20px;
+    background-color: #ffffff; /* Fundo branco para as seções */
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); /* Sombra mais leve para as seções */
+}
+
+.secaoUm h1 {
+    font-family: 'Pacifico', cursive; /* Fonte cursiva para o título principal */
+    font-size: 3.2em;
+    color: #ff6699; /* Rosa vibrante */
+    text-align: center;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.secaoUm p {
+    font-size: 1.1em;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #666666;
+}
+
+.secaoDois h2, .secaoTres h2 {
+    font-family: 'Quicksand', sans-serif; /* Fonte secundária para subtítulos */
+    font-size: 2em;
+    color: #8855bb; /* Roxo suave */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.secaoDois p {
+    font-size: 1em;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #666666;
+}
+
+video {
+    display: block; /* Garante que o vídeo ocupe sua própria linha */
+    width: 100%; /* Faz o vídeo ser responsivo à largura do container */
+    max-width: 640px; /* Limita o tamanho máximo do vídeo */
+    margin: 0 auto; /* Centraliza o vídeo */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.imagens {
+    display: flex;
+    flex-wrap: wrap; /* Permite que as imagens quebrem para a próxima linha */
+    justify-content: center; /* Centraliza as imagens */
+    gap: 15px; /* Espaço entre as imagens */
+    margin-top: 20px;
+}
+
+.imagens img {
+    width: 100%; /* Largura padrão para responsividade */
+    max-width: 220px; /* Largura máxima para cada imagem individual */
+    height: auto; /* Mantém a proporção */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave para hover */
+}
+
+.imagens img:hover {
+    transform: scale(1.05); /* Pequeno zoom ao passar o mouse */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Sombra mais intensa no hover */
+}
+
+/* Responsividade básica para telas menores */
+@media (max-width: 768px) {
+    .secaoUm h1 {
+        font-size: 2.5em;
+    }
+    .secaoDois h2, .secaoTres h2 {
+        font-size: 1.6em;
+    }
+    .container {
+        padding: 20px;
+        width: 95%;
+    }
+    .secaoUm, .secaoDois, .secaoTres {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .secaoUm h1 {
+        font-size: 2em;
+    }
+    .secaoUm p {
+        font-size: 1em;
+    }
+    .secaoDois h2, .secaoTres h2 {
+        font-size: 1.4em;
+    }
+    .imagens img {
+        max-width: 100%; /* Imagens ocupam toda a largura em telas muito pequenas */
+    }
+}
