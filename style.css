@@ -1,7 +1,8 @@
-/* Importação de fonte do Google Fonts para um toque mais delicado */
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300..700&display=swap');
+/* Importação de fontes Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300;400;500;600;700&display=swap');
+/* Pacifico para títulos principais, Quicksand para texto geral (com várias espessuras) */
 
-/* Reset básico para garantir consistência */
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -9,123 +10,186 @@
 }
 
 body {
-    font-family: 'Quicksand', sans-serif; /* Fonte principal */
-    background: linear-gradient(to bottom right, #ffe6f2, #e0f2fe); /* Degradê suave de rosa claro para azul claro */
+    font-family: 'Quicksand', sans-serif; /* Fonte geral */
+    background: linear-gradient(135deg, #fce4ec 0%, #e3f2fd 100%); /* Degradê mais suave e romântico */
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    color: #4a4a4a; /* Cor de texto mais suave */
-    line-height: 1.6;
+    min-height: 100vh; /* Altura mínima da tela inteira */
+    color: #333; /* Cor de texto padrão */
+    line-height: 1.7; /* Espaçamento entre linhas para melhor legibilidade */
 }
 
 .container {
-    max-width: 800px; /* Largura máxima para o conteúdo */
+    max-width: 850px; /* Largura um pouco maior para o container principal */
     width: 90%;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.95); /* Fundo branco quase opaco */
+    border-radius: 25px; /* Bordas mais arredondadas */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); /* Sombra mais pronunciada */
+    overflow: hidden;
+    margin: 20px auto; /* Margem superior e inferior para não colar nas bordas da tela */
+}
+
+/* Estilo para todas as seções */
+.secao {
+    margin-bottom: 50px; /* Mais espaço entre as seções */
     padding: 30px;
-    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco translúcido */
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    overflow: hidden; /* Garante que o conteúdo não vaze */
+    background-color: #ffffff; /* Fundo branco sólido para as seções */
+    border-radius: 20px; /* Bordas arredondadas para as seções */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* Sombra suave para as seções */
+    text-align: center; /* Centraliza conteúdo padrão das seções */
 }
 
-/* Estilo para as seções */
-.secaoUm, .secaoDois, .secaoTres {
-    margin-bottom: 40px; /* Espaço entre as seções */
-    padding: 20px;
-    background-color: #ffffff; /* Fundo branco para as seções */
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); /* Sombra mais leve para as seções */
-}
-
-.secaoUm h1 {
+/* Títulos */
+h1 {
     font-family: 'Pacifico', cursive; /* Fonte cursiva para o título principal */
-    font-size: 3.2em;
-    color: #ff6699; /* Rosa vibrante */
-    text-align: center;
+    font-size: 3.8em; /* Tamanho maior para o título */
+    color: #ff69b4; /* Rosa quente */
     margin-bottom: 25px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.15); /* Sombra para o título */
 }
 
-.secaoUm p {
-    font-size: 1.1em;
-    text-align: center;
+h2 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2.5em; /* Tamanho maior para subtítulos */
+    color: #8a2be2; /* Roxo vibrante */
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Parágrafos gerais (incluindo os da seção um) */
+p {
+    font-size: 1.15em; /* Ligeiramente maior para leitura */
+    color: #555;
     margin-bottom: 15px;
-    color: #666666;
+    font-weight: 500; /* Mais grossinho, mas não bold extremo */
+    text-align: justify; /* Alinhamento justificado para os blocos de texto */
+    padding: 0 10px; /* Pequeno padding para o texto não colar nas bordas */
 }
 
-.secaoDois h2, .secaoTres h2 {
-    font-family: 'Quicksand', sans-serif; /* Fonte secundária para subtítulos */
-    font-size: 2em;
-    color: #8855bb; /* Roxo suave */
-    text-align: center;
-    margin-bottom: 20px;
+.secao-um p {
+    font-weight: 600; /* Um pouco mais de peso para a mensagem principal */
+    text-align: center; /* Manter centralizado para a mensagem inicial */
 }
 
-.secaoDois p {
-    font-size: 1em;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #666666;
+/* Estilos específicos para a seção da música */
+.secao-dois p {
+    text-align: center; /* Manter a instrução centralizada */
+    margin-bottom: 10px;
 }
+
+.letra-musica {
+    background-color: #fcfcfc;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-height: 300px; /* Limita a altura para que a barra de rolagem apareça */
+    overflow-y: auto; /* Adiciona barra de rolagem vertical */
+    text-align: left; /* Alinhar a letra à esquerda */
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.05); /* Sombra interna para profundidade */
+}
+
+.letra-musica p {
+    font-size: 0.95em; /* Fonte um pouco menor para a letra */
+    margin-bottom: 5px; /* Menos espaço entre as linhas da letra */
+    line-height: 1.4;
+    color: #444;
+    font-weight: 400; /* Peso normal para a letra */
+    text-align: left; /* Forçar alinhamento à esquerda */
+}
+
+.letra-musica a {
+    text-decoration: none; /* Remover sublinhado do link */
+    color: inherit; /* Manter a cor do texto padrão */
+    display: block; /* Para que o link ocupe o espaço do parágrafo */
+}
+
+.letra-musica a:hover {
+    color: #ff69b4; /* Mudar cor ao passar o mouse */
+    text-decoration: underline; /* Adicionar sublinhado ao passar o mouse */
+}
+
 
 video {
-    display: block; /* Garante que o vídeo ocupe sua própria linha */
-    width: 100%; /* Faz o vídeo ser responsivo à largura do container */
-    max-width: 640px; /* Limita o tamanho máximo do vídeo */
-    margin: 0 auto; /* Centraliza o vídeo */
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    display: block;
+    width: 100%;
+    max-width: 700px; /* Tamanho máximo um pouco maior para o vídeo */
+    margin: 30px auto; /* Mais margem */
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
+/* Estilos específicos para a seção das imagens */
 .imagens {
     display: flex;
-    flex-wrap: wrap; /* Permite que as imagens quebrem para a próxima linha */
-    justify-content: center; /* Centraliza as imagens */
-    gap: 15px; /* Espaço entre as imagens */
-    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Mais espaço entre as imagens */
+    margin-top: 30px;
 }
 
 .imagens img {
-    width: 100%; /* Largura padrão para responsividade */
-    max-width: 220px; /* Largura máxima para cada imagem individual */
-    height: auto; /* Mantém a proporção */
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave para hover */
+    width: 100%;
+    max-width: 250px; /* Imagens ligeiramente maiores */
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer, cortando se necessário */
+    aspect-ratio: 1 / 1; /* Tenta manter as imagens quadradas */
 }
 
 .imagens img:hover {
-    transform: scale(1.05); /* Pequeno zoom ao passar o mouse */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Sombra mais intensa no hover */
+    transform: translateY(-8px) scale(1.03); /* Efeito de flutuar e pequeno zoom */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25); /* Sombra mais forte no hover */
 }
 
-/* Responsividade básica para telas menores */
+/* Responsividade */
 @media (max-width: 768px) {
-    .secaoUm h1 {
-        font-size: 2.5em;
-    }
-    .secaoDois h2, .secaoTres h2 {
-        font-size: 1.6em;
-    }
     .container {
-        padding: 20px;
+        padding: 25px;
         width: 95%;
     }
-    .secaoUm, .secaoDois, .secaoTres {
+    h1 {
+        font-size: 2.8em;
+    }
+    h2 {
+        font-size: 2em;
+    }
+    p {
+        font-size: 1em;
+    }
+    .secao {
+        padding: 20px;
+    }
+    .letra-musica {
         padding: 15px;
+    }
+    .imagens img {
+        max-width: 200px;
     }
 }
 
 @media (max-width: 480px) {
-    .secaoUm h1 {
+    .container {
+        padding: 15px;
+    }
+    h1 {
         font-size: 2em;
+        margin-bottom: 15px;
     }
-    .secaoUm p {
-        font-size: 1em;
+    h2 {
+        font-size: 1.5em;
+        margin-bottom: 15px;
     }
-    .secaoDois h2, .secaoTres h2 {
-        font-size: 1.4em;
+    p {
+        font-size: 0.95em;
+    }
+    .secao {
+        padding: 10px;
+        margin-bottom: 30px;
     }
     .imagens img {
         max-width: 100%; /* Imagens ocupam toda a largura em telas muito pequenas */
